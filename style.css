@@ -109,16 +109,23 @@ ol.lg li:before{content:counter(s);flex:none;width:24px;height:24px;border-radiu
   .hero{height:290px}
 }
 @media(min-width:1024px){
-  body{padding:24px}
-  #app{max-width:1180px;height:calc(100vh - 48px);flex-direction:row;border-radius:24px}
-  #screen{padding:32px 36px}.full{padding:0!important}
+  /* Desktop: aplikasi memenuhi seluruh layar (tanpa bingkai kartu) */
+  body{padding:0}
+  #app{max-width:none;width:100%;height:100vh;height:100dvh;flex-direction:row;border-radius:0;box-shadow:none}
+  #screen{padding:36px clamp(36px,4vw,72px)}.full{padding:0!important}
+  #screen>*{max-width:1320px}
   .nav{order:-1;flex-direction:column;justify-content:flex-start;width:210px;gap:6px;padding:24px 12px;border-radius:0;box-shadow:2px 0 14px rgba(78,52,46,.07)}
   .nav::before{content:'ResepKu';font-weight:700;font-size:22px;color:var(--o);padding:0 12px 18px}
   .nav button{flex:none;flex-direction:row;justify-content:flex-start;gap:12px;font-size:14px;padding:12px;border-radius:14px}
   .nav button.on{background:var(--soft)}
   .lst{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(4,1fr)}
-  .pc{width:180px}.pc .ph{height:120px}
-  .hero{height:340px}
+  .pc{width:220px}.pc .ph{height:150px}
+  .hero{height:380px}
+}
+@media(min-width:1440px){
+  .lst{grid-template-columns:repeat(4,1fr)}.grid{grid-template-columns:repeat(6,1fr)}
+  .pc{width:240px}.pc .ph{height:170px}
+  .nav{width:240px}
 }
 
 /* Gambar pengganti, foto bulat onboarding, dan pratinjau foto formulir */
