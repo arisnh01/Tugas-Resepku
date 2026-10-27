@@ -1,0 +1,9 @@
+{
+  "appId": "com.resepku.app",
+  "appName": "ResepKu",
+  "webDir": "www",
+  "server": { "androidScheme": "https" },
+  "plugins": {
+    "SplashScreen": { "launchShowDuration": 1500, "backgroundColor": "#FFF7F0", "showSpinner": false }
+  }
+}
